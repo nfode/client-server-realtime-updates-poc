@@ -9,7 +9,7 @@ This is a proof of concept for using centrifugo to update clients in realtime if
 2. Run `./createdocker.sh`
 
 # Run the server with docker
-`docker run -d --net="host" -p 8080:8080 realtime-update-server:latest
+`docker run -d --net="host" -p 8080:8080 nfode/realtime-update-server:latest
 `
 
 
