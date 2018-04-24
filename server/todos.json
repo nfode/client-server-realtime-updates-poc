@@ -1,0 +1,9 @@
+[{
+    "id": "1",
+    "text": "This is the first todo",
+    "checked": true
+}, {
+    "id": "2",
+    "text": "This is the second todo",
+    "checked": false
+}]

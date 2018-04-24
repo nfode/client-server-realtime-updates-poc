@@ -1,0 +1,7 @@
+package: github.com/nfode/client-server-realtime-updates-poc/server
+import:
+- package: github.com/centrifugal/gocent
+- package: github.com/labstack/echo
+  version: ^3.3.5
+  subpackages:
+  - middleware
