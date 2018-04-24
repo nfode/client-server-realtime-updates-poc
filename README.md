@@ -1,11 +1,8 @@
 # Client Server realtime updates
-This is a proof of concept for usin centrifugo to update clients in realtime if another client changes a value.
+This is a proof of concept for using centrifugo to update clients in realtime if another client changes a value.
 # Run centrifugo
 1. Enter the `centrifugo` folder
-2. Run 
-    ```
-    ./run.sh
-    ```
+2. Run `./run.sh`
 
 # Build the server
 1. Enter the `server` folder
