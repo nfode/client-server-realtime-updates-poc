@@ -6,4 +6,12 @@
     "id": "2",
     "text": "This is the second todo",
     "checked": false
+},{
+    "id": "3",
+    "text": "This is the third todo",
+    "checked": false
+},{
+    "id": "4",
+    "text": "This is the fourth todo",
+    "checked": false
 }]

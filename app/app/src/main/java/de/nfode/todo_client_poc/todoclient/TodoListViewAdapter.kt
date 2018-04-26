@@ -9,12 +9,14 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.CheckBox
 import android.widget.TextView
+import de.nfode.todo_client_poc.todoclient.api.TodoApi
+import de.nfode.todo_client_poc.todoclient.model.Todo
 import retrofit2.Call
 
-class TodoListViewAdapter(private val activity: Activity, todos: List<Todo>, restApi: TodoApi) : BaseAdapter() {
+class TodoListViewAdapter(private val activity: Activity, todos: List<Todo>, restApi: TodoApi?) : BaseAdapter() {
 
     private var todos = ArrayList<Todo>()
-    private var restApi: TodoApi
+    private var restApi: TodoApi?
 
     init {
         this.todos = todos as ArrayList
@@ -45,8 +47,8 @@ class TodoListViewAdapter(private val activity: Activity, todos: List<Todo>, res
         text.text = todo.text
         checkbox.isChecked = todo.checked
         checkbox.setOnClickListener {
-            var call: Call<Todo> = restApi.toogleChecked(todo.id)
-            Thread { call.execute() }.start()
+            var call: Call<Todo>? = restApi?.toogleChecked(todo.id)
+            Thread { call?.execute() }.start()
         }
         return view
     }

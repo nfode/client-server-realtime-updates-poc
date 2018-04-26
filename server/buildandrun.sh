@@ -1,3 +1,4 @@
 #!/bin/bash  
-
-go build && ./server
+cd src
+go build -o server . && ./server
+cd ..
