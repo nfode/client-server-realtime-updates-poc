@@ -1,0 +1,24 @@
+version: '3'
+services:
+  api:
+    image: "nfode/realtime-update-server"
+    container_name: api
+    ports:
+      - "8080:8080"
+    depends_on:
+      - centrifugo
+    environment:
+      CENTRIFUGO_HOST: centrifugo
+      CENTRIFUGO_PORT: 8000
+  centrifugo:
+    image: "centrifugo/centrifugo"
+    container_name: centrifugo
+    ports:
+      - "8000:8000"
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
+    volumes:
+      - ./centrifugo:/centrifugo
+    command: centrifugo -c config.json
